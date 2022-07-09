@@ -2,7 +2,7 @@
 \label{sec:descriptive_analysis}
 
 We split our descriptive analysis into two parts.
-First we analyse the trips in different forms, such as demand, availability and
+First, we analyze the trips in different forms, such as demand, availability and
 idle time along multiple spatial and temporal resolutions. Then we analyse the
 relationships between trips and other influencing factors, such as weather,
 land use and points of interests.
@@ -12,7 +12,7 @@ land use and points of interests.
 \label{subsec:descriptive_analysis_spatial_temporal}
 
 In order to get a better understanding on where possible hotspots of bicycle
-demand and availability in the system are, we investigate choropleth maps,
+demand and availability in the system are, we create and investigate choropleth maps,
 where we aggregate demand and availability by h3 hexagons.
 First we plot the total flow of bicycles, that is the sum of all incoming and
 outgoing trips. This can help us to identify hotspots.
@@ -28,8 +28,9 @@ With the plot as seen in figure \ref{fig:descriptive_analysis_total_flow} we
 can already hotpsots in the center of city, where the train station as well as
 the most shopping areas are, as well as a cluster of high flow hexagons in the
 west and east of the city, where residential areas are.
+We also see that the the hexagons around the borders of the city have very low flow. This shows that it is possible to satisfy a large portion of the demand by just focusing on the hotspots, which is an important consideration when entering the shared mobility market.
 
-Next we will analyse the net flow of bicycles per hexagon, which is the
+Next, we will analyze the net flow of bicycles per hexagon, which is the
 difference between incoming and outgoing trips. This measure is highly relevant
 for the bicycle sharing system operator, as it shows imbalances in the system.
 Imbalances occur when the number of trips that end are less or more than the

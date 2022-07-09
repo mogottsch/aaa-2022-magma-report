@@ -1,10 +1,10 @@
 \section{Clustering}
 \label{sec:clustering}
 
-In order to identify patterns in the trip data, we clustered trips using kmeans++ and gaussian mixture models. This can help in identifying local hotspots or recurring trips types such as commutes or leisure trips. 
+In order to identify patterns in the trip data, we clustered trips using kmeans++ and gaussian mixture models. This can help in identifying local hot spots or recurring trips types such as commutes or leisure trips.
 
-Kmeans++ is a hard clustering algorithm that assigns each data point to a definite cluster. Gaussian mixture models (GMMs), on the other  hand, are a soft clustering algorithm meaning we compute the probabilities of each data point belonging to each clusters. This gives us a measure of uncertainty. Moreover, while kmeans is mostly suited for capturing spherical shapes, GMM are also able to detect ellipsis shapes. However, non-convex shapes pose a difficulty for both algorithms. GMMs also tend to have longer computation times than kmeans due to the increased complexity. 
-In this section, we discuss the results of the hard clustering and soft clustering analysis. We clustered the data using all features in the first step and based on feature subsets in the second step. However, in this paper we only present the clustering using all features. We also omit plotting weather data, minimum distance and minimum average speed, which was also used in the clustering, as it did not yield any interesting insights. 
+Kmeans++ is a hard clustering algorithm that assigns each data point to a definite cluster. Gaussian mixture models (GMMs), on the other  hand, are a soft clustering algorithm meaning we compute the probabilities of each data point belonging to each clusters. This gives us a measure of uncertainty. Moreover, while kmeans is mostly suited for capturing spherical shapes, GMM are also able to detect ellipsis shapes. However, non-convex shapes pose a difficulty for both algorithms. GMMs also tend to have longer computation times than kmeans due to the increased complexity.
+In this section, we discuss the results of the hard clustering and soft clustering analysis. We clustered the data using all features in the first step and based on feature subsets in the second step. However, in this paper we only present the clustering using all features. We also omit plotting weather data, minimum distance and minimum average speed, which was also used in the clustering, as it did not yield any interesting insights.
 
 \subsection{Hard Clustering}
 \label{sec:hard_clustering}
@@ -18,9 +18,9 @@ In this section, we discuss the results of the hard clustering and soft clusteri
     \label{fig:kmeans_loc_temp}
 \end{figure}
 
--cluster 0: 
--cluster 1: long trips (not on average but outliers), 
--cluster 2: start a city center, early, during the week, short 
+-cluster 0:
+-cluster 1: long trips (not on average but outliers),
+-cluster 2: start a city center, early, during the week, short
 -cluster 3:go to city center
 -cluster 4:go to city center, during the week
 
@@ -32,9 +32,9 @@ In this section, we discuss the results of the hard clustering and soft clusteri
     \label{fig:kmeans_land_use}
 \end{figure}
 
--cluster 0: largest cluster, start from roads and go to urban fabric 
+-cluster 0: largest cluster, start from roads and go to urban fabric
 -cluster 1: start in urban fabric,
--cluster 2: got to railway or urban/ industrial areas, 
+-cluster 2: got to railway or urban/ industrial areas,
 -cluster 3:start at railway
 -cluster 4:
 
@@ -45,8 +45,8 @@ In this section, we discuss the results of the hard clustering and soft clusteri
     \label{fig:kmeans_poi}
 \end{figure}
 
--cluster 0: 
--cluster 1: 
+-cluster 0:
+-cluster 1:
 -cluster 2: to a lot of pois (working areas)
 -cluster 3: start at public transport (railway)
--cluster 4: starts at sustenance poi, (also arts/culture, sports, education), 
+-cluster 4: starts at sustenance poi, (also arts/culture, sports, education),

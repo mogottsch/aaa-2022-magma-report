@@ -19,7 +19,7 @@ outgoing trips. This can help us to identify hot spots.
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.8\textwidth]{Figures/descriptive_analysis/total_flow.png}
+    \includegraphics[width=0.8\textwidth]{figures/descriptive_analysis/total_flow.png}
     \caption{Total Flow Of Bicycles Per Hexagon}
     \label{fig:descriptive_analysis_total_flow}
 \end{figure}
@@ -42,12 +42,12 @@ can be used to perform effective relocations.
 \begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=1\textwidth]{Figures/descriptive_analysis/net_flow_original.png}
+        \includegraphics[width=1\textwidth]{figures/descriptive_analysis/net_flow_original.png}
         \caption{Original Scale}
         \label{fig:descriptive_analysis_net_flow_original}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=1\textwidth]{Figures/descriptive_analysis/net_flow_rescaled.png}
+        \includegraphics[width=1\textwidth]{figures/descriptive_analysis/net_flow_rescaled.png}
         \caption{Adapted Scale}
         \label{fig:descriptive_analysis_net_flow_rescaled}
     \end{subfigure}
@@ -55,7 +55,7 @@ can be used to perform effective relocations.
     \label{fig:descriptive_analysis_net_flow}
 \end{figure}
 
-Figure \ref{fig:descriptive_analysis_net_flow_original} shows the net flow of
+figure \ref{fig:descriptive_analysis_net_flow_original} shows the net flow of
 bicycles per hexagon. Wee see that the net flow for the hexagon next to the
 main train station is a large negative number, which means that more trips
 start than end there. Our custom should expect to observe the same behaviour
@@ -79,12 +79,12 @@ This plot allows us to identify seasonal imbalances, which can be further utiliz
 \begin{figure}[htb]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=1\textwidth]{Figures/descriptive_analysis/flossplatz_april.png}
+        \includegraphics[width=1\textwidth]{figures/descriptive_analysis/flossplatz_april.png}
         \caption{April}
         \label{fig:descriptive_analysis_flossplatz_april}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=1\textwidth]{Figures/descriptive_analysis/flossplatz_october.png}
+        \includegraphics[width=1\textwidth]{figures/descriptive_analysis/flossplatz_october.png}
         \caption{October}
         \label{fig:descriptive_analysis_flossplatz_october}
     \end{subfigure}
@@ -92,7 +92,7 @@ This plot allows us to identify seasonal imbalances, which can be further utiliz
     \label{fig:descriptive_analysis_flossplatz}
 \end{figure}
 
-One such example of a seasonal imbalance can be seen in Figure \ref{fig:descriptive_analysis_flossplatz}.
+One such example of a seasonal imbalance can be seen in figure \ref{fig:descriptive_analysis_flossplatz}.
 
 
 Next we will analyze the idle time of bicycles. The idle time is the time
@@ -102,15 +102,15 @@ of demand. Also unusual high idle times of single bicycles can be a sign of
 anomalies in the system, such as damaged or hidden bicycles.
 
 
-Figure \ref{fig:descriptive_analysis_idle_time_daily} shows the median idle time of bicycles per day.
+figure \ref{fig:descriptive_analysis_idle_time_daily} shows the median idle time of bicycles per day.
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.8\textwidth]{Figures/descriptive_analysis/idle_time_daily.png}
+    \includegraphics[width=0.8\textwidth]{figures/descriptive_analysis/idle_time_daily.png}
     \caption{Median Idle Time Of Bicycles Per Day}
     \label{fig:descriptive_analysis_idle_time_daily}
 \end{figure}
 
-In Figure \ref{fig:descriptive_analysis_idle_time_daily} We see that the idle time of bicycles seems to decrease until around July, after which it keeps steady.
+In figure \ref{fig:descriptive_analysis_idle_time_daily} We see that the idle time of bicycles seems to decrease until around July, after which it keeps steady.
 One possible explanation is that the operator was able to improve the relocation
 strategy, which results in less idle time of bicycles.
 Therefore, we advise the analysis of the bicycle relocations, to learn more about
@@ -121,7 +121,7 @@ of bicycles per hexagon to identify critical regions with high idle times.
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.8\textwidth]{Figures/descriptive_analysis/ide_time_hexagon.png}
+    \includegraphics[width=0.8\textwidth]{figures/descriptive_analysis/ide_time_hexagon.png}
     \caption{Median Idle Time Of Bicycles Per Hexagon}
     \label{fig:descriptive_analysis_idle_time_hexagon}
 \end{figure}
@@ -139,7 +139,7 @@ optimization of the system.
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.8\textwidth]{Figures/descriptive_analysis/availability_per_hexagon.png}
+    \includegraphics[width=0.8\textwidth]{figures/descriptive_analysis/availability_per_hexagon.png}
     \caption{Availability Per Hexagon}
     \label{fig:descriptive_analysis_availability_per_hexagon}
 \end{figure}

@@ -1,7 +1,7 @@
 \section{Conclusions}
 \label{sec:conclusions}
 
-Demand patterns for e-scooters and bicycles will differ to some extent. It is very important to reevaluate the findings after the introduction of the new e-scooter fleet. Another topic to consider in the future is the competition between different xx providers. It will be important to find source of competitive advantage. 
+Demand patterns for e-scooters and bicycles will differ to some extent. It is very important to reevaluate the findings after the introduction of the new e-scooter fleet. Another topic to consider in the future is the competition between different xx providers. It will be important to find source of competitive advantage.
 
 
 % Discussion
@@ -12,16 +12,16 @@ We solved this problem by simply using a subset of our training data to fit our 
 Other solutions to fit SVMs to large datasets exist. For example  \shortciteA{Williams01usingthe} show that an explicit approximation of the kernel through the Nyström method, instead utilizing the kernel-trick,  results in very similar predictive performance, while drastically decreasing computing time. Another popular approach, only applicable to the RBF kernel, is the 'Random Kitchen Sinks' method as proposed by \shortciteA{10.5555/2981562.2981710}. Both methods are already available in Sci-kit Learn and therefore an implementation would be straight forward.
 
 %Which further analysis would you consider useful and could be conducted on the given dataset? 
-In our analysis we have calculated the distance of trip as the beeline between start and end location. 
-While this approach yields a minimum distance of the actual trip, a better approximation would be to use a routing API, that finds the shortest way between the start and end location. 
-This would not only result in more accurate trip distances but also in more accurate trip speeds. 
+In our analysis we have calculated the distance of trip as the beeline between start and end location.
+While this approach yields a minimum distance of the actual trip, a better approximation would be to use a routing API, that finds the shortest way between the start and end location.
+This would not only result in more accurate trip distances but also in more accurate trip speeds.
 More accurate distances and speed could help to find better clusters.
 
-It would also be very interesting to analyse the relocations that happen in the system.
+It would also be very interesting to analyze the relocations that happen in the system.
 As we expect NextBike to be fairly experienced in effective relocation, we can learn a lot from their relocation strategy when entering the market.
 
 %Based on this analysis, could you draw the boundaries of an operating area for the fleet? 
-From our spatial analysis we find that the majority of trips are made from or to specific hot spots, such as the main train station or specific residential areas. 
+From our spatial analysis we find that the majority of trips are made from or to specific hot spots, such as the main train station or specific residential areas.
 We advise our customer to start with a smaller operating area that incorporates all major hot spots.
 Having this smaller operating area and continuously collecting data on it, makes it easy to identify areas where extension is needed. Such areas could be identified through an increased amount of ending trips at the operating boundary.
 % Which other external data sources might be interesting to consider? 

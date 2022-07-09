@@ -3,7 +3,7 @@
 
 We split our descriptive analysis into two parts.
 First, we analyze the trips in different forms, such as demand, availability and
-idle time along multiple spatial and temporal resolutions. Then we analyse the
+idle time along multiple spatial and temporal resolutions. Then we analyze the
 relationships between trips and other influencing factors, such as weather,
 land use and points of interests.
 
@@ -28,7 +28,7 @@ With the plot as seen in figure \ref{fig:descriptive_analysis_total_flow} we
 can already hots pots in the center of city, where the train station as well as
 the most shopping areas are, as well as a cluster of high flow hexagons in the
 west and east of the city, where residential areas are.
-We also see that the the hexagons around the borders of the city have very low flow. 
+We also see that the the hexagons around the borders of the city have very low flow.
 This shows that it is possible to satisfy a large portion of the demand by just focusing on the hot spots, which is an important consideration when entering the shared mobility market.
 
 Next, we will analyze the net flow of bicycles per hexagon, which is the
@@ -58,8 +58,8 @@ can be used to perform effective relocations.
 Figure \ref{fig:descriptive_analysis_net_flow_original} shows the net flow of
 bicycles per hexagon. Wee see that the net flow for the hexagon next to the
 main train station is a large negative number, which means that more trips
-start than end there. Our custom should expect to observe the same behaviour 
-when entering the market and therefore should consider to relocate bicycles 
+start than end there. Our custom should expect to observe the same behaviour
+when entering the market and therefore should consider to relocate bicycles
 to that hexagon, in order to avoid unmet demand.
 As the net flow for main train station hexagon is so large, the color scale is
 so wide that we can barely see any other imbalances.
@@ -70,8 +70,8 @@ With the adjusted color scale as seen in figure
 especially in the center of the city.
 
 For an ongoing analysis of similar net flow plots, we advise to be careful with lowering the h3 resolution.
-If two neighboring hexagons have negative and positive net flow, then they could cancel each other out when the resolution is decreased. 
-Event though a lower resolution might make it easier to understand the displayed information, it can also hide important information.  
+If two neighboring hexagons have negative and positive net flow, then they could cancel each other out when the resolution is decreased.
+Event though a lower resolution might make it easier to understand the displayed information, it can also hide important information.
 
 We also created an interactive plot that shows the net flows per hexagon for each month.
 This plot allows us to identify seasonal imbalances, which can be further utilized to improve operational decisions.
@@ -95,7 +95,7 @@ This plot allows us to identify seasonal imbalances, which can be further utiliz
 One such example of a seasonal imbalance can be seen in Figure \ref{fig:descriptive_analysis_flossplatz}.
 
 
-Next we will analyse the idle time of bicycles. The idle time is the time
+Next we will analyze the idle time of bicycles. The idle time is the time
 between two consecutive trips with the same bicycle. It is an important measure
 for the bicycle sharing system operator as it might indicate and oversaturation
 of demand. Also unusual high idle times of single bicycles can be a sign of
@@ -126,12 +126,12 @@ of bicycles per hexagon to identify critical regions with high idle times.
     \label{fig:descriptive_analysis_idle_time_hexagon}
 \end{figure}
 
-We see a few hexagons at the border regions that have high idle times. 
+We see a few hexagons at the border regions that have high idle times.
 While it is possible that these idle times arise from the fact that there is only little demand in these regions, it could also be due to an increased probability of vandalism, which is not unusual in vehicle sharing systems.
 We advise to carefully monitor such high idle time regions to prevent high costs through damaged vehicles.
 For this sake we also provide an interactive map of the median idle time per hexagon for each month in our notebooks.
 
-Lastly, we will also analyse the availability of bicycles. The availability,
+Lastly, we will also analyze the availability of bicycles. The availability,
 similar to identifying hot spots and imbalances, can help to identify regions
 with over saturated or under saturated demand and is therefore important for
 optimization of the system.

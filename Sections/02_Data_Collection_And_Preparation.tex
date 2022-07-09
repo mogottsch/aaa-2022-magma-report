@@ -11,10 +11,10 @@ The bicycle rental data is available as a snapshot of bicycle locations at the s
 % The bicycle rental data is available as a snapshot of bicycle locations at the start and end of a trip as well as the first and last second of a day.
 % The last location of a bicycle at a given day is, temporally, only one second apart from the first location of the consecutive day.
 % However, that these locations often differ by multiple kilometres, which is impossible to travel in one second.
-Therefore, we assume that the first and last entry of a day are not actually one second apart but instead represent relocations that happened at another time. To clean the data, we remove all samples that are not in the time interval from 01.01.2019 to 31.12.2019, as we only analyse the year 2019. Additionally, we compare bicycle locations with the official NextBike flexzone to eliminate samples with erroneous GPS data. The results show, that over \(70\%\) of all samples lie outside of the flexzone. As it is very unlikely that so many samples are erroneous, we decided to add a 10km buffer to the flexzone, so that only samples that are really far away are removed.
+Therefore, we assume that the first and last entry of a day are not actually one second apart but instead represent relocations that happened at another time. To clean the data, we remove all samples that are not in the time interval from 01.01.2019 to 31.12.2019, as we only analyze the year 2019. Additionally, we compare bicycle locations with the official NextBike flexzone to eliminate samples with erroneous GPS data. The results show, that over \(70\%\) of all samples lie outside of the flexzone. As it is very unlikely that so many samples are erroneous, we decided to add a 10km buffer to the flexzone, so that only samples that are really far away are removed.
 
 %% -------------------------------------- weather data
-We have also collected hourly weather data, such as temperature, precipitation, cloud coverage and wind speed. For this purpose we used the open portal of the German Weather Service \shortcite{german_weather_service}. Our selection is based on the approach taken by \shortciteA{schroer2022data}, who used these features in their research on repositioning in on-demand vehicle sharing systems. We used time interpolation to fill missing values. 
+We have also collected hourly weather data, such as temperature, precipitation, cloud coverage and wind speed. For this purpose we used the open portal of the German Weather Service \shortcite{german_weather_service}. Our selection is based on the approach taken by \shortciteA{schroer2022data}, who used these features in their research on repositioning in on-demand vehicle sharing systems. We used time interpolation to fill missing values.
 % Additionally information about the hourly weather was added to the trip data. For this we included the meteorological features temperature, precipitation, cloud cover and wind speed. This selection is based on the approach taken by \shortciteA{schroer2022data} who used these features for bike sharing predictive analytics. Source of the data is the open data portal of the German Weather service\footnote{\url{https://opendata.dwd.de}}. The weather data then got merged to the trips utilizing the timestamp.
 
 %% -------------------------------------- landuse data
@@ -24,7 +24,7 @@ Additionally, we gathered the land use data from the Kopernikus website \shortci
 % For individual trips, we merged this on the start and end location. For hexagons, we calculated for each hexagon which percentage of the area represents which land use type.
 
 %% -------------------------------------- POI data
-Lastly, we extracted locations of various points of interest (POI) from an open-source tool called  OpenStreetMap \shortcite{osm}. We decided to focus on five POI categories to preserve the clarity of our findings and to avoid the curse of dimensionality. The categories included are - sustenance, public transport, education, arts and culture, sports. 
+Lastly, we extracted locations of various points of interest (POI) from an open-source tool called  OpenStreetMap \shortcite{osm}. We decided to focus on five POI categories to preserve the clarity of our findings and to avoid the curse of dimensionality. The categories included are - sustenance, public transport, education, arts and culture, sports.
 
 %% -------------------------------------- trips calculation
 \subsection{Trips Calculation}
@@ -40,13 +40,13 @@ To generate trips from bicycle locations we designed the following procedure:
     \centering
     \begin{tabular}{ |l l| }
         \hline
-        1 & Sort all samples by time \\
+        1 & Sort all samples by time                                          \\
         \hline
-        2 & Group all samples by bicycle ids \\
+        2 & Group all samples by bicycle ids                                  \\
         \hline
         3 & Create tuples with each two consecutive locations of each bicycle \\
         \hline
-        4 & Classify tuples as trips or relocations \\
+        4 & Classify tuples as trips or relocations                           \\
         \hline
     \end{tabular}
 \end{table}
@@ -77,8 +77,8 @@ Additionally, we aggregate trips across time intervals of 1, 2, 6 and 24 hours. 
         \hline
         \textbf{start hexagon id} & \textbf{end hexagon id} & \textbf{h3 resolution} & \textbf{time interval} & \textbf{demand} \\
         \hline
-        871f1ab96ffffff & 871f1a164ffffff & 2 & 7 & 15 \\
-         \hline
+        871f1ab96ffffff           & 871f1a164ffffff         & 2                      & 7                      & 15              \\
+        \hline
     \end{tabular}
     \caption{Sample of aggregated trip data}
     \label{table:aggregated_trips}
